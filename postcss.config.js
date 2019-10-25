@@ -6,7 +6,9 @@ const plugins = [
 ]
 
 if (process.env.NODE_ENV === 'production') {
-  plugins.push(purgecss())
+  plugins.push(purgecss({
+    content: ['index.html', './**/*.elm']
+  }))
 }
 
 module.exports = { plugins }
