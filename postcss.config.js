@@ -1,8 +1,10 @@
 const tailwind = require('tailwindcss')
+const postcssTailwindElm = require('postcss-elm-tailwind')
 const purgecss = require('@fullhuman/postcss-purgecss')
 
 const plugins = [
-  tailwind()
+  tailwind(),
+  postcssTailwindElm()
 ]
 
 if (process.env.NODE_ENV === 'production') {

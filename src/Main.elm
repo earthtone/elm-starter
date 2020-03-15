@@ -4,6 +4,7 @@ import Browser
 import Html exposing (button, div, text)
 import Html.Attributes exposing (class)
 import Html.Events exposing (onClick)
+import TW
 
 
 main =
@@ -25,8 +26,8 @@ update msg model =
 
 
 view model =
-    div [ class "flex w-full justify-center pt-3" ]
-        [ button [ onClick Decrement, class "py-1 px-2 mx-2" ] [ text "-" ]
-        , div [ class "text-xl" ] [ text (String.fromInt model) ]
-        , button [ onClick Increment, class "py-1 px-2 mx-2" ] [ text "+" ]
+    div [ TW.flex, TW.w_full, TW.justify_center, TW.pt_3 ]
+        [ button [ onClick Decrement, TW.py_1, TW.px_2, TW.mx_2 ] [ text "-" ]
+        , div [ TW.text_4xl ] [ text (String.fromInt model) ]
+        , button [ onClick Increment, TW.py_1, TW.px_2, TW.mx_2 ] [ text "+" ]
         ]
